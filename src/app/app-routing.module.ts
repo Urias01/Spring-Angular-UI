@@ -8,6 +8,10 @@ import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-
 import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
 import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
 import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
+import { ClienteDeleteComponent } from './components/client/client-delete/client-delete.component';
+import { ClienteCreateComponent } from './components/client/client-create/client-create.component';
+import { ClienteUpdateComponent } from './components/client/client-update/client-update.component';
+import { ClienteListComponent } from './components/client/client-list/client-list.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -17,7 +21,12 @@ const routes: Routes = [
       { path: 'tecnicos', component: TecnicoListComponent},
       { path: 'tecnicos/create', component: TecnicoCreateComponent},
       { path: 'tecnicos/update/:id', component: TecnicoUpdateComponent},
-      { path: 'tecnicos/delete/:id', component: TecnicoDeleteComponent}
+      { path: 'tecnicos/delete/:id', component: TecnicoDeleteComponent},
+
+      { path: 'clientes', component: ClienteListComponent},
+      { path: 'clientes/create', component: ClienteCreateComponent},
+      { path: 'clientes/update/:id', component: ClienteUpdateComponent},
+      { path: 'clientes/delete/:id', component: ClienteDeleteComponent}
     ],
   },
 ];

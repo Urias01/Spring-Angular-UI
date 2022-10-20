@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /* Para trabalhar com formulários no Angular 12 */
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
- /* Para realizar requisições HTTP */
+/* Para realizar requisições HTTP */
 import { HttpClientModule } from '@angular/common/http';
 
 /*  Imports para componentes do Angular Material */
@@ -39,9 +39,26 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
 import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
 import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
-
+import { ClienteListComponent } from './components/client/client-list/client-list.component';
+import { ClienteCreateComponent } from './components/client/client-create/client-create.component';
+import { ClienteUpdateComponent } from './components/client/client-update/client-update.component';
+import { ClienteDeleteComponent } from './components/client/client-delete/client-delete.component';
 @NgModule({
-  declarations: [AppComponent, NavComponent, HomeComponent, HeaderComponent, TecnicoListComponent, LoginComponent, TecnicoCreateComponent, TecnicoUpdateComponent, TecnicoDeleteComponent],
+  declarations: [
+    AppComponent,
+    NavComponent,
+    HomeComponent,
+    HeaderComponent,
+    TecnicoListComponent,
+    LoginComponent,
+    TecnicoCreateComponent,
+    TecnicoUpdateComponent,
+    TecnicoDeleteComponent,
+    ClienteListComponent,
+    ClienteCreateComponent,
+    ClienteUpdateComponent,
+    ClienteDeleteComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -68,7 +85,7 @@ import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecn
       closeButton: true,
       progressBar: true,
     }),
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent],
