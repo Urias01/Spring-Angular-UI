@@ -43,6 +43,7 @@ import { ClienteListComponent } from './components/client/client-list/client-lis
 import { ClienteCreateComponent } from './components/client/client-create/client-create.component';
 import { ClienteUpdateComponent } from './components/client/client-update/client-update.component';
 import { ClienteDeleteComponent } from './components/client/client-delete/client-delete.component';
+import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +58,8 @@ import { ClienteDeleteComponent } from './components/client/client-delete/client
     ClienteListComponent,
     ClienteCreateComponent,
     ClienteUpdateComponent,
-    ClienteDeleteComponent
+    ClienteDeleteComponent,
+    ChamadoListComponent
   ],
   imports: [
     BrowserModule,
