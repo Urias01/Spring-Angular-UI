@@ -9,20 +9,26 @@
   <form class="form">
     <mat-form-field class="full-width" appearance="outline">
       <mat-label>Título do chamado</mat-label>
-      <input matInput placeholder="Ex. Trocar monitor" />
+      <input
+        [formControl]="titulo"
+        required
+        matInput
+        placeholder="Ex. Trocar monitor"
+      />
     </mat-form-field>
     <div class="status-prioridade">
       <mat-form-field appearance="outline">
         <mat-label>Selecione um status</mat-label>
-        <mat-select>
+        <mat-select [formControl]="status" required>
           <mat-option value="0">ABERTO</mat-option>
           <mat-option value="1">EM ANDAMENTO</mat-option>
           <mat-option value="2">ENCERRADO</mat-option>
         </mat-select>
       </mat-form-field>
+
       <mat-form-field appearance="outline">
         <mat-label>Selecione uma prioridade</mat-label>
-        <mat-select>
+        <mat-select [formControl]="prioridade" required>
           <mat-option value="0">BAIXA</mat-option>
           <mat-option value="1">MÉDIA</mat-option>
           <mat-option value="2">ALTA</mat-option>
@@ -33,32 +39,44 @@
     <div class="tecnico">
       <mat-form-field class="full-width" appearance="outline">
         <mat-label>Selecione uma técnico</mat-label>
-        <mat-select>
+        <mat-select [formControl]="tecnico" required>
           <mat-option value="0">técnico</mat-option>
         </mat-select>
       </mat-form-field>
-
     </div>
 
     <div class="cliente">
       <mat-form-field class="full-width" appearance="outline">
         <mat-label>Selecione uma cliente</mat-label>
-        <mat-select>
+        <mat-select [formControl]="cliente" required>
           <mat-option value="0">cliente</mat-option>
         </mat-select>
       </mat-form-field>
-
     </div>
 
     <mat-form-field class="full-width" appearance="outline">
       <mat-label>Deixe uma descrição</mat-label>
-      <textarea matInput class="descricao" placeholder="Ex. trocar monitor queimado..."></textarea>
+      <textarea
+      [formControl]="descricao"
+        required
+        matInput
+        class="descricao"
+        placeholder="Ex. trocar monitor queimado..."
+      ></textarea>
     </mat-form-field>
   </form>
 
-  <button mat-raised-button class="full-width mat-elevation-z4" color="primary">Adicionar</button>
-  <button mat-stroked-button class="full-width mat-elevation-z4" color="warn">Cancelar</button>
+  <button
+    [disabled]="!validaCampos()"
+    mat-raised-button
+    class="full-width mat-elevation-z4"
+    color="primary"
+  >
+    Adicionar
+  </button>
+  <button mat-stroked-button class="full-width mat-elevation-z4" color="warn">
+    Cancelar
+  </button>
 
   <p class="full-width">Desenvolvido por Urias Pereira</p>
-
 </div>
