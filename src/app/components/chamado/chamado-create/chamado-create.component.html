@@ -98,7 +98,6 @@
 
   <button
     [disabled]="!validaCampos()"
-    routerLink="../"
     mat-raised-button
     class="full-width mat-elevation-z4"
     color="primary"
@@ -106,7 +105,7 @@
   >
     Adicionar
   </button>
-  <button mat-stroked-button class="full-width mat-elevation-z4" color="warn">
+  <button routerLink="../" mat-stroked-button class="full-width mat-elevation-z4" color="warn">
     Cancelar
   </button>
 
